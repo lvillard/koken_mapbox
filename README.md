@@ -1,7 +1,7 @@
 Show a map with mapbox with photo published in your Koken
 ============
 
-First, be aware that i am not a all a javascript developer, neither for koken. I am sure that the script can be corrected / optimized.
+First, be aware that i am not at all a javascript developer, neither for koken. I am sure that the script can be corrected / optimized.
 Do not hesitate if you have suggestions !
 
 ## How to install it :
