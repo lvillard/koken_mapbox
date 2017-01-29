@@ -21,7 +21,7 @@ see : https://github.com/pnizet/koken_mapbox
 
 ## With some additions:
 - it uses spiders on the lower zoom level when pictures share the same coordinates (see the section "// Mapbox spiders")
-- load the map twice due to a bug mention in the koken forum (see the section "//Check if the current URL contains '#'")
+- load the map twice due to a bug mentioned (source?) in the koken forum (see the section "//Check if the current URL contains '#'")
 - the height of the map will be reduce if the screen is less thant 766px (for mobile phone)
 ```css
 #map_full { top:0; bottom:0; width:100%; height: 450px; margin-top: -5px;}
@@ -33,7 +33,7 @@ see : https://github.com/pnizet/koken_mapbox
 	}
 }
 ```
-- makes able to pass coordinates in the URL of your map from content.lens to directly zoom around it (see the section "// Is there coordinates in URL from content.lens ?") 
+- making able to pass coordinates in the URL of your map from content.lens to directly zoom around it (see the section "// Is there coordinates in URL from content.lens ?") 
 
 ## Link your pictures in content.lens with your map:
 see : http://www.here-and-there-pics.me/albums/ladakh-india/timeline/parvati-valley-in-the-kullu-district-of-himachal-pradesh/
