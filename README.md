@@ -2,7 +2,7 @@ Show a map with mapbox with photo published in your Koken
 ============
 
 First, be aware that i am not a all a javascript developer, neither for koken. I am sure that the script can be corrected / optimized.
-Do not hesitate if you have suggestion.
+Do not hesitate if you have suggestions !
 
 ## How to install it :
 - Download the file called map.lens
@@ -36,16 +36,16 @@ see : https://github.com/pnizet/koken_mapbox
 - making able to pass coordinates in the URL of your map from content.lens to directly zoom around it (see the section "// Is there coordinates in URL from content.lens ?") 
 
 ## Link your pictures in content.lens with your map:
-see : http://www.here-and-there-pics.me/albums/ladakh-india/timeline/parvati-valley-in-the-kullu-district-of-himachal-pradesh/
+see an exemple here [for a picture linked to the map](http://www.here-and-there-pics.me/albums/ladakh-india/timeline/parvati-valley-in-the-kullu-district-of-himachal-pradesh/ "Parvati Valley"): 
 - Just add the loop inside your template or its child, inside the content.lens (next to the exif in my case) 
 ```css
 <koken:geolocation>
 	<koken:not empty="geolocation.latitude">
-	<a href="http://www.YourUrlForYourMap.eu/?qlong={{ geolocation.longitude }}&qlat={{ geolocation.latitude }}">
+	<a href="http://www.YourUrlForYourMap.eu/map/?qlong={{ geolocation.longitude }}&qlat={{ geolocation.latitude }}">
 	View on a map</a>
 	</koken:not>
 </koken:geolocation>
 ```
-- And replace YourUrlForYourMap (e.g. http://www.here-and-there-pics.me/map/?qlong={{ geolocation.longitude }}&qlat={{ geolocation.latitude }})
+- And replace YourUrlForYourMap.eu/map/ by your own path to your map. 
 
 That it !
