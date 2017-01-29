@@ -1,22 +1,50 @@
-koken_mapbox
+Show a map with mapbox with photo published in your Koken
 ============
 
-A "kind of" plugin for koken CMS which integrate Mapbox map and groups markers in clusters
+First, be aware that i am not a all a javascript developer, neither for koken. I am sure that the script can be corrected / optimized.
+Do not hesitate if you have suggestion.
 
-
-First of all I would like to precise that web dev is not my job, i've done this with my very little knowledge of web dev and I'm pretty sure that there is a lot of improvement that can be done. But it works, if you have suggestions, I will be pleased to read them.
-
-So here is the method to use it:
-- First create an account on MapBox.com (it's free, if you are not displaying more than 3000 maps/month), Create a project, it will give you a "Map ID"
+How to install it :
 - Download the file called map.lens
-- Replace in the code YOUR_MAP (line 171) by your "Map ID"
-- Save the file / Upload the file to /storage/theme/your_theme/
+- First create an account on MapBox.com
 
-Configuration of the map
+- Create a project, it will give you a "Map ID"
+- Add it to map.lens : var map = L.mapbox.map('map_full', 'Your Map Id', ...
+
+- Create a Mapbox &ccess token (https://www.mapbox.com/help/define-access-token/)
+- Add it to map.lens : L.mapbox.accessToken= 'Your Koken Access Token';
+
+- Save the map.lens and upload the file to /storage/theme/your_theme/
+
+Configuration of the map, from the script by pnizet (https://github.com/pnizet/koken_mapbox)
 - It will display 250 markers (max loop), you can change the number of markers displayed by changing the line 51
 - If you left the code untouched the map will be centred on the median coordinate of all the markers (I've done this because most of my pictures are in France, a few are in Australia... showing a map that fits to all the markers was quite weird)
-- If you prefer to display a map that fits all the markers uncomments line 197 to 199
+- If you prefer to display a map that fits all the markers uncomments line of the section "// Fits map to markers..."
 
-That's all !
+With some news fonctions:
+- it uses spider on the lower zoom level when pictures share the same coordinates (see the section "// Mapbox spiders")
+- the height of the map will be reduce if the screen is less thant 766px (for mobile phone)
+```css
+		#map_full { top:0; bottom:0; width:100%; height: 450px; margin-top: -5px;}
+		@media screen and (min-width: 766px) {
+			#map_full {
+			display: inline-block;
+			height: 1000px;
+			width: 100%;
+			}
+		}
+```
+- makes able to pass coordinates in the URL of your map from content.lens to directly zoom around it (see the section "// Is there coordinates in URL from content.lens ?") 
 
-If you would like to see it in action you can go to his page : http://pierre-nizet.fr/carte/
+Link your pictures in content.lens with your map (see : http://www.here-and-there-pics.me/albums/ladakh-india/timeline/parvati-valley-in-the-kullu-district-of-himachal-pradesh/) :
+-- Just add the loop inside your template or his child, inside the content.lens (next to the exif in my case) 
+```css
+									<koken:geolocation>
+											<koken:not empty="geolocation.latitude">
+												  <a href="http://www.YourUrlForYourMap.eu/?qlong={{ geolocation.longitude }}&qlat={{ geolocation.latitude }}">View on a map</a>
+											</koken:not>
+										</koken:geolocation>
+```
+- And replace YourUrlForYourMap (e.g. http://www.here-and-there-pics.me/map/?qlong={{ geolocation.longitude }}&qlat={{ geolocation.latitude }})
+
+That it !
