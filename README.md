@@ -37,8 +37,7 @@ see : https://github.com/pnizet/koken_mapbox
 
 ## Link your pictures in content.lens with your map:
 see : http://www.here-and-there-pics.me/albums/ladakh-india/timeline/parvati-valley-in-the-kullu-district-of-himachal-pradesh/
-
--- Just add the loop inside your template or its child, inside the content.lens (next to the exif in my case) 
+- Just add the loop inside your template or its child, inside the content.lens (next to the exif in my case) 
 ```css
 <koken:geolocation>
 	<koken:not empty="geolocation.latitude">
