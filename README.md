@@ -36,7 +36,7 @@ see : https://github.com/pnizet/koken_mapbox
 - making able to pass coordinates in the URL of your map from content.lens to directly zoom around it (see the section "// Is there coordinates in URL from content.lens ?") 
 
 ## Link your pictures in content.lens with your map:
-see an exemple here [for a picture linked to the map](http://www.here-and-there-pics.me/albums/ladakh-india/timeline/parvati-valley-in-the-kullu-district-of-himachal-pradesh/ "Parvati Valley"): 
+see an exemple here [for a picture linked to the map](http://www.here-and-there-pics.me/albums/ladakh-india/timeline/parvati-valley-in-the-kullu-district-of-himachal-pradesh/ "Parvati Valley")
 - Just add the loop inside your template or its child, inside the content.lens (next to the exif in my case) 
 ```css
 <koken:geolocation>
