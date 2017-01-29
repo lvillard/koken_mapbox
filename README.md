@@ -7,13 +7,10 @@ Do not hesitate if you have suggestion.
 ## How to install it :
 - Download the file called map.lens
 - First create an account on MapBox.com
-
 - Create a project, it will give you a "Map ID"
 - Add it to map.lens : var map = L.mapbox.map('map_full', 'Your Map Id', ...
-
 - Create a Mapbox &ccess token (https://www.mapbox.com/help/define-access-token/)
 - Add it to map.lens : L.mapbox.accessToken= 'Your Koken Access Token';
-
 - Save the map.lens and upload the file to /storage/theme/your_theme/
 
 ## Configuration of the map, from the script by pnizet 
@@ -40,6 +37,7 @@ see : https://github.com/pnizet/koken_mapbox
 
 ## Link your pictures in content.lens with your map:
 see : http://www.here-and-there-pics.me/albums/ladakh-india/timeline/parvati-valley-in-the-kullu-district-of-himachal-pradesh/
+
 -- Just add the loop inside your template or its child, inside the content.lens (next to the exif in my case) 
 ```css
 <koken:geolocation>
