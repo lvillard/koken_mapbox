@@ -9,7 +9,7 @@ Do not hesitate if you have suggestions !
 - First create an account on MapBox.com
 - Create a project, it will give you a "Map ID"
 - Add it to map.lens : var map = L.mapbox.map('map_full', 'Your Map Id', ...
-- Create a Mapbox &ccess token (https://www.mapbox.com/help/define-access-token/)
+- Create a Mapbox access token (https://www.mapbox.com/help/define-access-token/)
 - Add it to map.lens : L.mapbox.accessToken= 'Your Koken Access Token';
 - Save the map.lens and upload the file to /storage/theme/your_theme/
 
