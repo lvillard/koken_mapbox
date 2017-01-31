@@ -21,7 +21,7 @@ see : https://github.com/pnizet/koken_mapbox
 
 ## With some additions:
 - it uses spiders on the lower zoom level when pictures share the same coordinates (see the section "// Mapbox spiders")
-- load the map twice due to a bug mentioned (source?) in the koken forum (see the section "//Check if the current URL contains '#'")
+- load the map twice due to a bug mentioned (source [here](https://kokensupport.com/viewtopic.php?f=14&t=332 "Koken Community forum")) in the koken Community forum (see the section "//Check if the current URL contains '#'")
 - the height of the map will be reduce if the screen is less than 766px (for mobile phone)
 ```css
 #map_full { top:0; bottom:0; width:100%; height: 450px; margin-top: -5px;}
